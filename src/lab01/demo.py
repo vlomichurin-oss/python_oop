@@ -89,7 +89,7 @@ def main():
         print(f"  ОШИБКА: {e}")
 
     # --- 6. Доступ к атрибуту класса через класс и экземпляр ---
-    print("\n--- 6. ДОСТУП К АТРИБУТАМ КЛАССА ---")
+    print("\n--- 6. Доступ к атрибутам класса ---")
 
     print(f"Через класс Player.available_classes: {Player.available_classes}")
     print(f"Через класс Player.max_level: {Player.max_level}")
