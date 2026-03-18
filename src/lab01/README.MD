@@ -87,6 +87,7 @@ class Player:
 ## Бизнес методы
 - **`take_damage`** - Нанесение урона
 - **`gain_experience`** - Получение опыта
+- **`is_alive`** - Проверка жизни
 ```
  def take_damage(self, damage: int) -> int:
         if not isinstance(damage, int):
