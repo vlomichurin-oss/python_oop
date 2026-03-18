@@ -14,3 +14,26 @@ class Player:
         self.health = health
         self.experience = experience
 ```
+## Декаратор
+```
+@property
+    def nickname(self) -> str:
+        return self._nickname
+
+    @property
+    def player_class(self) -> str:
+        return self._player_class
+
+    @property
+    def level(self) -> int:
+        return self._level
+
+    @property
+    def health(self) -> int:
+        return self._health
+
+    @property
+    def experience(self) -> int:
+        return self._experience
+```
+## Метод валидации
