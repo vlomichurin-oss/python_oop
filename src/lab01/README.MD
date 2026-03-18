@@ -85,6 +85,8 @@ class Player:
         self._experience = value
 ```
 ## Бизнес методы
+- **`take_damage`** - Нанесение урона
+- **`gain_experience`** - Получение опыта
 ```
  def take_damage(self, damage: int) -> int:
         if not isinstance(damage, int):
