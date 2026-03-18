@@ -102,3 +102,11 @@ class Player:
         self.health = health
         self.experience = experience
 ```
+## Свойства `@property`
+
+- `nickname` — уникальное имя
+- `player_class` — получение класса 
+- `level` — уровень 
+- `health` — здоровье
+- `experiance` — опыт
+
