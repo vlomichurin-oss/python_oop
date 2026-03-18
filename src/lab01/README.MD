@@ -127,3 +127,13 @@ class Player:
 - `__str__` — красивый вывод через print  
 - `__repr__` — технический вывод  
 - `__eq__` — сравнение объектов  
+
+## Описание сценариев
+### Сценарий №1. Создание обьектов и вывод.
+```
+Создан игрок
+  👤 MaxVerstappen | [mage] | Ур. 10 | ❤️ 200 HP | ✨ 5000 XP | Жив
+
+Представление для отладки (__repr__):
+  Player(nickname='MaxVerstappen', player_class='mage', level=10, health=200, experience=5000)
+```
