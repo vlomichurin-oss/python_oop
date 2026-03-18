@@ -78,7 +78,7 @@ is_alive() - проверка состояния
 Нельзя получать опыт, если мертв
 Нельзя повышать уровень, если мертв
 
-#Реализованный класс: Player
+# Реализованный класс: Player
 ```
 class Player:
     available_classes = ("warrior", "mage", "archer", "healer")
