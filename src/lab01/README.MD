@@ -97,3 +97,13 @@ class Player:
 - `avalible_classes` — Допустимые классы
 - `max_level` — Макисмальный уровень
 - `base_experience` — Начальный уровень  
+
+## Закрытые поля:
+```
+    def __init__(self, nickname: str, player_class: str, level: int = 1, health: int = 100, experience: int = 0):
+        self.nickname = nickname
+        self.player_class = player_class
+        self.level = level
+        self.health = health
+        self.experience = experience
+```
