@@ -94,3 +94,6 @@ class Player:
         self.experience = experience
 ```
 ## Атрибуты класса: 
+- `avalible_classes` — Допустимые классы
+- `max_level` — Макисмальный уровень
+- `base_experience` — Начальный уровень  
