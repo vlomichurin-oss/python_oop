@@ -2,13 +2,11 @@ from model import Player
 
 
 class PlayerCollection:
-    """коллекция для хранения и управления объектами Player"""
     
     def __init__(self):
         self._players = []
 
     def _check_type(self, player):
-        """проверка типа"""
         if not isinstance(player, Player):
             raise TypeError(f"Ожидается Player, получен {type(player)}")
     
