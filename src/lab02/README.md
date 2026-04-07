@@ -44,4 +44,4 @@
 
 # Демонстрация работы (demo.py)
 Добавление/удаление персонажей. Проверка на класс персонажей
-![]('/Users/edna/Desktop/python_oop/src/images/lab02/Снимок экрана 2026-04-07 в 11.45.00.png')
+![](/Users/edna/Desktop/python_oop/src/images/lab02/Снимок экрана 2026-04-07 в 11.45.00.png)
