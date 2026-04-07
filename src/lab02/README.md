@@ -20,7 +20,7 @@
 
 ## Поиск
 
-* `find_by_nickname()nickname` - Поиск игрока по никнейму
+* `find_by_nickname(nickname)` - Поиск игрока по никнейму
 * `find_by_class(player_class)` - Возвращает список игроков указанного класса
 
 ## Сортировка
