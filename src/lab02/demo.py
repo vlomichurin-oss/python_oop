@@ -1,4 +1,3 @@
-# src/lab02/demo.py
 from model import Player
 from collection import PlayerCollection
 
