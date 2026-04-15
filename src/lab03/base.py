@@ -12,7 +12,7 @@ class Player(ABC):
         self.player_class = player_class
         self.level = level
         self.health = health
-        self.experience = experience
+        self.experience = experiencex
 
     @property
     def nickname(self) -> str:
@@ -109,12 +109,10 @@ class Player(ABC):
     
     @abstractmethod
     def calculate_power(self) -> int:
-        """Расчет силы персонажа (разный для разных типов)"""
         pass
     
     @abstractmethod
     def get_specialization(self) -> str:
-        """Информация о специализации персонажа"""
         pass
     
     def __str__(self) -> str:

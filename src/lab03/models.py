@@ -32,41 +32,30 @@ class Warrior(Player):
             raise ValueError("Защита должна быть от 0 до 50")
         self._defense = value
     
-    # Новый метод (требование для оценки 3)
     def heavy_attack(self) -> int:
-        """Тяжелая атака - урон зависит от силы"""
         damage = self._strength * 2
         print(f"{self.nickname} использует Тяжелую атаку! Урон: {damage}")
         return damage
     
-    # Переопределенный метод (требование для оценки 4)
     def take_damage(self, damage: int) -> int:
-        """Воин получает меньше урона благодаря защите"""
         reduced_damage = max(1, damage - self._defense // 2)
         print(f"Защита снизила урон с {damage} до {reduced_damage}")
         return super().take_damage(reduced_damage)
     
-    # Реализация абстрактного метода для полиморфизма (оценка 5)
     def calculate_power(self) -> int:
-        """Сила воина = уровень * 10 + сила + защита"""
         return self.level * 10 + self.strength + self.defense
     
     def get_specialization(self) -> str:
         return f"Воин | Сила: {self.strength} | Защита: {self.defense}"
     
-    # Переопределенный __str__ (оценка 4)
     def __str__(self) -> str:
         return f"{super().__str__()} | Сил:{self.strength} Защ:{self.defense}"
 
 
-class Mage(Player):
-    """Класс Маг - специализация на магической силе и мане"""
-    
+class Mage(Player):    
     def __init__(self, nickname: str, level: int = 1, health: int = 80,
                  experience: int = 0, mana: int = 100, spell_power: int = 25):
-        # Вызов конструктора базового класса через super()
         super().__init__(nickname, "mage", level, health, experience)
-        # Новые атрибуты (требование для оценки 3)
         self.mana = mana                # мана - ресурс для заклинаний
         self.spell_power = spell_power  # сила заклинаний - влияет на урон магии
     
@@ -94,7 +83,6 @@ class Mage(Player):
             raise ValueError("Сила заклинаний должна быть от 1 до 100")
         self._spell_power = value
     
-    # Новый метод (требование для оценки 3)
     def cast_spell(self) -> int:
         """Заклинание - тратит ману, наносит урон"""
         if self._mana < 20:
@@ -105,7 +93,6 @@ class Mage(Player):
         print(f"{self.nickname} колдует Огненный шар! Урон: {damage}")
         return damage
     
-    # Переопределенный метод (требование для оценки 4)
     def gain_experience(self, exp: int) -> bool:
         """Маг получает бонус к мане при повышении уровня"""
         leveled_up = super().gain_experience(exp)
@@ -114,7 +101,6 @@ class Mage(Player):
             print(f"{self.nickname} повысил уровень! Мана: {self._mana}")
         return leveled_up
     
-    # Реализация абстрактного метода для полиморфизма (оценка 5)
     def calculate_power(self) -> int:
         """Сила мага = уровень * 8 + сила заклинаний + мана // 2"""
         return self.level * 8 + self.spell_power + self.mana // 2
@@ -122,19 +108,14 @@ class Mage(Player):
     def get_specialization(self) -> str:
         return f"Маг | Мана: {self.mana} | Сил.закл: {self.spell_power}"
     
-    # Переопределенный __str__ (оценка 4)
     def __str__(self) -> str:
         return f"{super().__str__()} | Мана:{self.mana} СЗ:{self.spell_power}"
 
 
-class Archer(Player):
-    """Класс Лучник - специализация на дальних атаках и ловкости"""
-    
+class Archer(Player):    
     def __init__(self, nickname: str, level: int = 1, health: int = 100,
                  experience: int = 0, agility: int = 25, critical_chance: int = 15):
-        # Вызов конструктора базового класса через super()
         super().__init__(nickname, "archer", level, health, experience)
-        # Новые атрибуты
         self.agility = agility              # ловкость - влияет на урон и уклонение
         self.critical_chance = critical_chance  # шанс крит.удара
     
@@ -162,9 +143,7 @@ class Archer(Player):
             raise ValueError("Шанс крита должен быть от 0 до 50")
         self._critical_chance = value
     
-    # Новый метод
     def precision_shot(self) -> int:
-        """Точный выстрел - повышенный урон с шансом крита"""
         damage = self._agility * 2
         # Шанс критического урона
         if self._critical_chance > 10:
@@ -174,16 +153,13 @@ class Archer(Player):
             print(f"{self.nickname} стреляет из лука! Урон: {damage}")
         return damage
     
-    # Переопределенный метод
     def take_damage(self, damage: int) -> int:
-        """Лучник может уклониться от атаки"""
         dodge_chance = self._agility // 10
         if dodge_chance > 20:
             print(f"{self.nickname} уклоняется от атаки!")
             return self.health
         return super().take_damage(damage)
     
-    # Реализация абстрактного метода для полиморфизма
     def calculate_power(self) -> int:
         """Сила лучника = уровень * 9 + ловкость * 2 + шанс крита"""
         return self.level * 9 + self.agility * 2 + self.critical_chance
