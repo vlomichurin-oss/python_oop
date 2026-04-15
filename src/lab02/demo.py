@@ -1,4 +1,4 @@
-from model import Player
+from lab02.models import Player
 from collection import PlayerCollection
 
 

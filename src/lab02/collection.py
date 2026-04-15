@@ -1,4 +1,4 @@
-from model import Player
+from models import Player
 
 
 class PlayerCollection:
