@@ -12,7 +12,7 @@ class Player(ABC):
         self.player_class = player_class
         self.level = level
         self.health = health
-        self.experience = experiencex
+        self.experience = experience
 
     @property
     def nickname(self) -> str:
