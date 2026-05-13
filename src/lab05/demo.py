@@ -2,7 +2,7 @@ from strategies import *
 from collection import PlayerCollection
 
 
-# ===== КЛАССЫ ИГРОКОВ (упрощённые) =====
+# ===== КЛАССЫ ИГРОКОВ =====
 
 class Player:
     available_classes = ("warrior", "mage", "archer", "healer")

@@ -59,12 +59,10 @@ def make_experience_filter(min_exp):
 # ===== Функции для map =====
 
 def player_to_string(player):
-    """Преобразование игрока в строку."""
     return str(player)
 
 
 def player_to_dict(player):
-    """Преобразование игрока в словарь."""
     return {
         'nickname': player.nickname,
         'class': player.player_class,
@@ -77,17 +75,14 @@ def player_to_dict(player):
 
 
 def extract_nickname(player):
-    """Извлечение никнейма."""
     return player.nickname
 
 
 def extract_power(player):
-    """Извлечение силы."""
     return player.calculate_power()
 
 
 def apply_discount_to_power(discount):
-    """Создаёт функцию применения скидки к силе."""
     return lambda p: int(p.calculate_power() * (1 - discount))
 
 
@@ -120,5 +115,4 @@ class HealStrategy:
 # ===== Функции для apply =====
 
 def heal_all_players(player):
-    """Лечит всех игроков."""
     player.health = min(player.health + 30, 200)
