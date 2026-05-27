@@ -72,7 +72,6 @@ class TypedCollection(Generic[T]):
     def map(self, transform: Callable[[T], R]) -> List[R]:
         return [transform(item) for item in self._items]
     
-    # ===== Дополнительные полезные методы =====
     
     def any(self, predicate: Callable[[T], bool]) -> bool:
         return any(predicate(item) for item in self._items)
@@ -81,7 +80,6 @@ class TypedCollection(Generic[T]):
         return all(predicate(item) for item in self._items)
 
 
-# ===== Адаптеры для демонстрации работы с протоколами =====
 
 def make_displayable(obj: D) -> D:
     return obj
